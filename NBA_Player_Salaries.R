@@ -47,7 +47,7 @@ Player_Salary_2019<-data.frame(Player_2019,Salary_2019)
 
 
 ##scraping 2019-2020 season
-salaries_2020 <-read_html("https://hoopshype.com/salaries/players/2019-2020/") 
+salaries_2020 <-read_html("https://hoopshype.com/salaries/players/") 
 Player_2020<-salaries_2020 %>%html_nodes("tbody .name")%>%html_text()
 Player_2020<-gsub('\t|\n', '',Player_2020)
 Salary_2020<-salaries_2020 %>%html_nodes(".name+ td")%>%html_text()
